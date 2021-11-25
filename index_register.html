@@ -71,7 +71,9 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btnSubmit">Register</button>
+
+			<div class="popup" onclick="setLocalStorage()"><a href="index.html">Register</a>
+			</div>
         </div>
     </div>
 </div>
@@ -80,6 +82,12 @@
 
 <!-- #MainPart -->
 
+<script>
+	// When the user clicks on div, open the popup
+	function setLocalStorage() {
+	  localStorage.setItem("fromRegister", "register");
+	}
+</script>
 
 	
 <!-- Start Footer -->

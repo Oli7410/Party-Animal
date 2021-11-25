@@ -36,11 +36,14 @@
 	
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a href="index.html" class="nav-link
-					active"><i class="fas fa-home"></i> Home</a></li>
-					<li class="nav-item"><a href="index_parties.html" class="nav-link"><i class="fas fa-icons"></i>  Parties</a></li>
-					<li class="nav-item"><a href="index_login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-					<li class="nav-item"><a href="index_register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+				active"><i class="fas fa-home"></i> Home</a></li>
+				<li class="nav-item"><a href="index_parties.html" class="nav-link"><i class="fas fa-icons"></i>  Parties</a></li>
+				<li class="nav-item"><a href="index_login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+				<li class="nav-item"><a href="index_register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
 				</ul>
+				<div class="popup" onclick="setLocalStorage()">
+					<a href="index_parties.html">  <span class="popuptext" id="myPopup" style="margin-left: -550px; margin-top: -200px;"> This is main page!</span></a>
+				</div>
 		</div>
 		</div>
 	</nav>
@@ -126,6 +129,28 @@ data-interval="10000">
 
 </div>
 <!-- End Image Carousel -->
+
+<script>
+
+	// When the user clicks on div, open the popup
+	function setLocalStorage() {
+		var value = localStorage.getItem("fromRegister");
+		if(value == "parties") {
+			localStorage.setItem("fromRegister", "parties");
+		}
+	}
+
+	var myPopup = document.getElementById("myPopup");
+	var parties = document.getElementById("parties");
+	var layout = localStorage.getItem("fromRegister");
+
+	if(layout == "register"){
+		myPopup.classList.toggle("show");
+		localStorage.setItem("fromRegister", "parties");
+	}
+
+</script>
+
 
 <!-- Banner Ads  -->
 <section id="banner_adds">
