@@ -438,3 +438,73 @@ footer .svg-inline--fa:hover{
 }
 
 /* --- Registered guide popup --- */
+
+/* --- Top parties --- */
+
+.mt-100 {
+  margin-top: 100px
+}
+
+.card {
+  border-color: forestgreen
+}
+
+.mb-30 {
+  margin-bottom: 30px !important
+}
+
+.card-img-tiles {
+  display: block;
+}
+
+a {
+  color: forestgreen;
+  text-decoration: none !important
+}
+
+.card-img-tiles>.inner {
+  display: table;
+  width: 100%
+}
+
+.card-img-tiles .main-img,
+.card-img-tiles .thumblist {
+  display: table-cell;
+
+  vertical-align: middle
+}
+
+.card-img-tiles .main-img>img:last-child,
+.card-img-tiles .thumblist>img:last-child {
+  margin-bottom: 0
+}
+
+.card-img-tiles .main-img>img,
+.card-img-tiles .thumblist>img {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px
+}
+
+.thumblist {
+  width: 35%;
+  display: table-cell;
+  width: 65%;
+  padding: 15px;
+  vertical-align: middle
+}
+
+.card-img-tiles .thumblist>img {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+  padding: .45rem .5rem !important;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+/* --- Top parties --- */
