@@ -450,7 +450,7 @@ footer .svg-inline--fa:hover{
 }
 
 .mb-30 {
-  margin-bottom: 30px !important
+  margin-bottom: 150px !important
 }
 
 .card-img-tiles {
@@ -470,7 +470,7 @@ a {
 .card-img-tiles .main-img,
 .card-img-tiles .thumblist {
   display: table-cell;
-
+  width: 65%;
   vertical-align: middle
 }
 
@@ -488,6 +488,7 @@ a {
 
 .thumblist {
   width: 35%;
+  border-left: 1px solid #e1e7ec !important;
   display: table-cell;
   width: 65%;
   padding: 15px;
@@ -505,6 +506,7 @@ a {
   padding: .45rem .5rem !important;
   font-size: .875rem;
   line-height: 1.5;
+  border-radius: .2rem
 }
 
 /* --- Top parties --- */
