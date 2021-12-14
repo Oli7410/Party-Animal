@@ -40,8 +40,11 @@
 				<li class="nav-item"><a href="index_maps.html" class="nav-link"><i class="fas fa-map-marker-alt"></i> Maps</a></li>
 				<li class="nav-item"><a href="index_parties.html" class="nav-link"><i class="fas fa-icons"></i>  Parties</a></li>
 				<li class="nav-item"><a href="index_profile.html" class="nav-link"><i class="fas fa-user"></i> Profile</a></li>
+        <li class="nav-item"><a href="index_top.html" class="nav-link"><i class="fas fa-icons"></i> Top</a></li>
+        <li class="nav-item"><a href="index_closest_parties.html" class="nav-link"><i class="fas fa-icons"></i> Close</a></li>
 				<li class="nav-item"><a href="index_login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-				<li class="nav-item"><a href="index_register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li class="nav-item"><a href="index_register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
+				<li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
 			</ul>
 		</div>
 		</div>
@@ -52,45 +55,85 @@
 
 <!-- #Main Part -->
 <div style="text-align: center; margin-top: 50px;">
-    <h1>Artimiausių renginių sąrašas prie jūsų</h1>
+    <h1>Closest parties near you</h1>
 </div>
 <div class="container mt-10" style="margin-top: 100px; margin-bottom: 100px;">
     <div class="row">
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6" style="margin-bottom: 150px;">
             <div class="card mb-5"><a class="card-img-tiles" href="#" data-abc="true">
                     <div class="inner">
                         <div class="main-img"><img src="img/Parties/party1.jpg" alt="Category"></div>
                     </div>
                 </a>
                 <div class="card-body text-center">
-                    <h4 class="card-title">Kalėdinis vakarėlis</h4>
+                    <h4 class="card-title">Christmas time</h4>
                     <div class="container">
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Daugiau informacijos</button>
-                      
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More</button>
+                        <button type="button" class="btn btn-danger btn-lg" >Cancel</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">Register</button>
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#stuffModal">Items</button>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
-                          <div class="modal-dialog">
-                          
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Renginio informacija</h4>
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Party information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Good mood</p>
+                                  <p>2. Bring a gift for a stranger.</p>
+                                  <p>3. Bring your own drinks.</p>
+                                  <p>3. Wear redish clothes.</p>
+                                  <p>4. Address 3 KTU dorm</p>
+                                  <p>4. Date 2021-12-22</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-body">
-                                <p>1. Atsinešti gerą nuotaiką</p>
-                                <p>2. Atsinešti dovaną nepažįstamam žmogui.</p>
-                                <p>3. Atsinešti savo gerimus.</p>
-                                <p>4. Adresas Studentų gatvė 50</p>
-                                <p>4. Data 2021-12-21</p>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="stuffModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Items information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Balloons.</p>
+                                  <p>2. Banners</p>
+                                  <p>3. Centerpieces</p>
+                                  <p>1. Confetti.</p>
+                                  <p>2. Party Hats.</p>
+                                  <p>3. Food.</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Uždaryti</button>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="registrationModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Are your sure you want to register?</h4>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary mr-auto" data-dismiss="modal" >Register</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Maybe not..</button>
+                                 </div>
                               </div>
-                            </div>
-                            
-                          </div>
+                           </div>
                         </div>
                         
                       </div>
@@ -104,34 +147,74 @@
                     </div>
                 </a>
                 <div class="card-body text-center">
-                    <h4 class="card-title">Jeronimo šventė</h4>
+                    <h4 class="card-title">Jeremy's birthday</h4>
                     <div class="container">
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Daugiau informacijos</button>
-                      
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More</button>
+                        <button type="button" class="btn btn-danger btn-lg" >Cancel</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">Register</button>
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#stuffModal">Items</button>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
-                          <div class="modal-dialog">
-                          
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Renginio informacija</h4>
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Party information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Good mood</p>
+                                  <p>2. Bring a gift for a stranger.</p>
+                                  <p>3. Bring your own drinks.</p>
+                                  <p>3. Wear redish clothes.</p>
+                                  <p>4. Address 3 KTU dorm</p>
+                                  <p>4. Date 2021-12-22</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-body">
-                                <p>1. Atsinešti gerą nuotaiką</p>
-                                <p>2. Atsinešti bent 50 eurų jubiliatui.</p>
-                                <p>3. Apsirengti šventiškai.</p>
-                                <p>4. Adresas Jono g. 2, Kaunas</p>
-                                <p>4. Data 2021-12-27</p>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="stuffModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Items information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Balloons.</p>
+                                  <p>2. Banners</p>
+                                  <p>3. Centerpieces</p>
+                                  <p>1. Confetti.</p>
+                                  <p>2. Party Hats.</p>
+                                  <p>3. Food.</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Uždaryti</button>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="registrationModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Are your sure you want to register?</h4>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary mr-auto" data-dismiss="modal" >Register</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Maybe not..</button>
+                                 </div>
                               </div>
-                            </div>
-                            
-                          </div>
+                           </div>
                         </div>
                         
                       </div>
@@ -145,35 +228,74 @@
                     </div>
                 </a>
                 <div class="card-body text-center">
-                    <h4 class="card-title">Kalėdos jau čia</h4>
+                    <h4 class="card-title">Christmas time</h4>
                     <div class="container">
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Daugiau informacijos</button>
-                      
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More</button>
+                        <button type="button" class="btn btn-danger btn-lg" >Cancel</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">Register</button>
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#stuffModal">Items</button>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
-                          <div class="modal-dialog">
-                          
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Renginio informacija</h4>
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Party information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Good mood</p>
+                                  <p>2. Bring a gift for a stranger.</p>
+                                  <p>3. Bring your own drinks.</p>
+                                  <p>3. Wear redish clothes.</p>
+                                  <p>4. Address 3 KTU dorm</p>
+                                  <p>4. Date 2021-12-22</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-body">
-                                <p>1. Atsinešti gerą nuotaiką</p>
-                                <p>2. Atsinešti dovaną nepažįstamam žmogui.</p>
-                                <p>3. Atsinešti savo gerimus.</p>
-                                <p>3. Apsirengti raudonai.</p>
-                                <p>4. Adresas 3 KTU bendrabutis</p>
-                                <p>4. Data 2021-12-22</p>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="stuffModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Items information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Balloons.</p>
+                                  <p>2. Banners</p>
+                                  <p>3. Centerpieces</p>
+                                  <p>1. Confetti.</p>
+                                  <p>2. Party Hats.</p>
+                                  <p>3. Food.</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Uždaryti</button>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="registrationModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Are your sure you want to register?</h4>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary mr-auto" data-dismiss="modal" >Register</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Maybe not..</button>
+                                 </div>
                               </div>
-                            </div>
-                            
-                          </div>
+                           </div>
                         </div>
                         
                       </div>
@@ -190,32 +312,71 @@
                     <h4 class="card-title">Razzle Dazzle</h4>
                     <div class="container">
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Daugiau informacijos</button>
-                      
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More</button>
+                        <button type="button" class="btn btn-danger btn-lg" >Cancel</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">Register</button>
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#stuffModal">Items</button>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
-                          <div class="modal-dialog">
-                          
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Renginio informacija</h4>
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Party information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Good mood</p>
+                                  <p>2. Bring a gift for a stranger.</p>
+                                  <p>3. Bring your own drinks.</p>
+                                  <p>3. Wear redish clothes.</p>
+                                  <p>4. Address 3 KTU dorm</p>
+                                  <p>4. Date 2021-12-22</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-body">
-                                <p>1. Atsinešti gerą nuotaiką</p>
-                                <p>2. Atsinešti dovaną nepažįstamam žmogui.</p>
-                                <p>3. Atsinešti savo gerimus.</p>
-                                <p>3. Apsirengti raudonai.</p>
-                                <p>4. Adresas 3 KTU bendrabutis</p>
-                                <p>4. Data 2021-12-22</p>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="stuffModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Items information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Balloons.</p>
+                                  <p>2. Banners</p>
+                                  <p>3. Centerpieces</p>
+                                  <p>1. Confetti.</p>
+                                  <p>2. Party Hats.</p>
+                                  <p>3. Food.</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Uždaryti</button>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="registrationModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Are your sure you want to register?</h4>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary mr-auto" data-dismiss="modal" >Register</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Maybe not..</button>
+                                 </div>
                               </div>
-                            </div>
-                            
-                          </div>
+                           </div>
                         </div>
                         
                       </div>
@@ -232,32 +393,71 @@
                     <h4 class="card-title">Rockin' Rollick</h4>
                     <div class="container">
                         <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Daugiau informacijos</button>
-                      
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">More</button>
+                        <button type="button" class="btn btn-danger btn-lg" >Cancel</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registrationModal">Register</button>
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#stuffModal">Items</button>
                         <!-- Modal -->
                         <div class="modal fade" id="myModal" role="dialog">
-                          <div class="modal-dialog">
-                          
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Renginio informacija</h4>
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Party information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Good mood</p>
+                                  <p>2. Bring a gift for a stranger.</p>
+                                  <p>3. Bring your own drinks.</p>
+                                  <p>3. Wear redish clothes.</p>
+                                  <p>4. Address 3 KTU dorm</p>
+                                  <p>4. Date 2021-12-22</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-body">
-                                <p>1. Atsinešti gerą nuotaiką</p>
-                                <p>2. Atsinešti dovaną nepažįstamam žmogui.</p>
-                                <p>3. Atsinešti savo gerimus.</p>
-                                <p>3. Apsirengti raudonai.</p>
-                                <p>4. Adresas 3 KTU bendrabutis</p>
-                                <p>4. Data 2021-12-22</p>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="stuffModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Items information</h4>
+                                 </div>
+                                 <div class="modal-body">
+                                  <p>1. Balloons.</p>
+                                  <p>2. Banners</p>
+                                  <p>3. Centerpieces</p>
+                                  <p>1. Confetti.</p>
+                                  <p>2. Party Hats.</p>
+                                  <p>3. Food.</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Uždaryti</button>
+                           </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="registrationModal" role="dialog">
+                           <div class="modal-dialog">
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Are your sure you want to register?</h4>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary mr-auto" data-dismiss="modal" >Register</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Maybe not..</button>
+                                 </div>
                               </div>
-                            </div>
-                            
-                          </div>
+                           </div>
                         </div>
                         
                       </div>
