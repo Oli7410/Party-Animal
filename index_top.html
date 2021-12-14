@@ -80,6 +80,7 @@
                                     <h4 class="modal-title">Party information</h4>
                                  </div>
                                  <div class="modal-body">
+                                   
                                   <p>1. Good mood</p>
                                   <p>2. Bring a gift for a stranger.</p>
                                   <p>3. Bring your own drinks.</p>
@@ -103,12 +104,18 @@
                                     <h4 class="modal-title">Items information</h4>
                                  </div>
                                  <div class="modal-body">
-                                  <p>1. Balloons.</p>
-                                  <p>2. Banners</p>
-                                  <p>3. Centerpieces</p>
-                                  <p>1. Confetti.</p>
-                                  <p>2. Party Hats.</p>
-                                  <p>3. Food.</p>
+
+                                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+                                  <ul id="myUL">
+                                    <li><a href="#">Balloons</a></li>
+                                    <li><a href="#">Banners</a></li>
+                                    <li><a href="#">Centerpieces</a></li>
+                                    <li><a href="#">Confetti</a></li>
+                                    <li><a href="#">Party Hats</a></li>
+                                    <li><a href="#">Food</a></li>
+                                    <li><a href="#">Candles</a></li>
+                                  </ul>
                                  </div>
                                  <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -184,12 +191,15 @@
                                     <h4 class="modal-title">Items information</h4>
                                  </div>
                                  <div class="modal-body">
-                                  <p>1. Balloons.</p>
-                                  <p>2. Banners</p>
-                                  <p>3. Centerpieces</p>
-                                  <p>1. Confetti.</p>
-                                  <p>2. Party Hats.</p>
-                                  <p>3. Food.</p>
+                                  <ul id="myUL">
+                                    <li><a href="#">Balloons</a></li>
+                                    <li><a href="#">Banners</a></li>
+                                    <li><a href="#">Centerpieces</a></li>
+                                    <li><a href="#">Confetti</a></li>
+                                    <li><a href="#">Party Hats</a></li>
+                                    <li><a href="#">Food</a></li>
+                                    <li><a href="#">Candles</a></li>
+                                  </ul>
                                  </div>
                                  <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -242,12 +252,15 @@
                                                             <h4 class="modal-title">Party information</h4>
                                                          </div>
                                                          <div class="modal-body">
-                                                            <p>1. Atsinešti gerą nuotaiką</p>
-                                                            <p>2. Atsinešti dovaną nepažįstamam žmogui.</p>
-                                                            <p>3. Atsinešti savo gerimus.</p>
-                                                            <p>3. Apsirengti raudonai.</p>
-                                                            <p>4. Adresas 3 KTU bendrabutis</p>
-                                                            <p>4. Data 2021-12-22</p>
+
+                                                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+                                                          <p>1. Good mood</p>
+                                                          <p>2. Bring a gift for a stranger.</p>
+                                                          <p>3. Bring your own drinks.</p>
+                                                          <p>3. Wear redish clothes.</p>
+                                                          <p>4. Address 3 KTU dorm</p>
+                                                          <p>4. Date 2021-12-22</p>
                                                          </div>
                                                          <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -265,12 +278,18 @@
                                                             <h4 class="modal-title">Items information</h4>
                                                          </div>
                                                          <div class="modal-body">
-                                                            <p>1. Konfeti.</p>
-                                                            <p>2. Vakarėlio kepuraitės.</p>
-                                                            <p>3. Sienų dekoracijos.</p>
-                                                            <p>1. Limonadas.</p>
-                                                            <p>2. Maistas.</p>
-                                                            <p>3. Žvakės.</p>
+
+                                                          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                                                           
+                                                          <ul id="myUL">
+                                                            <li><a href="#">Balloons</a></li>
+                                                            <li><a href="#">Banners</a></li>
+                                                            <li><a href="#">Centerpieces</a></li>
+                                                            <li><a href="#">Confetti</a></li>
+                                                            <li><a href="#">Party Hats</a></li>
+                                                            <li><a href="#">Food</a></li>
+                                                            <li><a href="#">Candles</a></li>
+                                                          </ul>
                                                          </div>
                                                          <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -336,6 +355,25 @@
 
 
 	<!-- Script Source Files -->
+
+  <script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
 
 	<!-- jQuery -->
 	<script src="js/jquery-3.5.1.min.js"></script>
