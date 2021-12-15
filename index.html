@@ -21,10 +21,15 @@
 		height: 300px;
 		background-image: url("img/halloween.jpg");
 	}
-	#christmasBg {
+	#newYearBg {
 		width: 100%;
 		height: 300px;
-		background-image: url("img/christmas.jpg");
+		background-image: url("img/newYear.jpg");
+	}
+	#valentineBg {
+		width: 100%;
+		height: 300px;
+		background-image: url("img/valentine.jpg");
 	}
 </style>
 	<!-- Top Bar -->
@@ -85,8 +90,12 @@ data-interval="10000">
 							<h3 class="pb-3">Let's find a party for you!</h3>
 							<a href="index_contacts.html" class="btn btn-danger btn-lg mr-2">More information</a>
 							<a href="#" class="btn btn-primary btn-lg ml-2">See on map</a>
-							<button class="btn btn-dark"  onclick="halloweenBg()">Halloween theme</button>
-							<button class="btn btn-outline-light"  onclick="christmasBg()">Christmas theme</button>
+							<div class="row d-flex justify-content-center mt-3">
+								<button class="btn btn-dark"  onclick="halloweenBg()">Halloween theme</button>
+								<button class="btn btn-secondary mx-3"  onclick="valentineBg()">Valentine theme</button>
+								<button class="btn btn-outline-light"  onclick="newYearBg()">New Year theme</button>								
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -186,8 +195,8 @@ data-interval="10000">
 		document.getElementById("halloweenBg").style.backgroundImage = 'url(img/halloween.jpg)';
 	}
 
-	function christmasBg() {
-		var x = document.getElementById("christmasBg");
+	function newYearBg() {
+		var x = document.getElementById("newYearBg");
 		if (x.style.visibility === "hidden") 
 		{
 			x.style.visibility = "visible";
@@ -197,21 +206,36 @@ data-interval="10000">
 			x.style.visibility = "hidden"; 
 		}
 		
-		document.getElementById("christmasBg").style.backgroundImage = 'url(img/christmas.jpg)';
+		document.getElementById("newYearBg").style.backgroundImage = 'url(img/newYear.jpg)';
 	}
 
+	function valentineBg() {
+		var x = document.getElementById("valentineBg");
+		if (x.style.visibility === "hidden") 
+		{
+			x.style.visibility = "visible";
+		}
+		else 
+		{
+			x.style.visibility = "hidden"; 
+		}
+		
+		document.getElementById("valentineBg").style.backgroundImage = 'url(img/valentine.jpg)';
+	}
 </script>
 
 
 <!-- Banner Ads  -->
 <div id="halloweenBg" style="visibility: hidden;">
-<div id="christmasBg" style="visibility: hidden;">
+<div id="valentineBg" style="visibility: hidden;">
+<div id="newYearBg" style="visibility: hidden;">
 	<section id="banner_adds" style="visibility: visible;">
 		<div class="container py-5 text-center">
 		<img src="img/Advertising/banner1.jpg" alt="banner1" class="img-fluid">
 		<img src="img/Advertising/banner2.jpg" alt="banner1" class="img-fluid">
 		</div>
 	</section>
+</div>
 </div>
 </div>
 <!-- !Banner Ads  -->
