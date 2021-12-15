@@ -42,6 +42,7 @@
 					<li class="nav-item"><a href="index_profile.html" class="nav-link"><i class="fas fa-user"></i> Profile</a></li>
 					<li class="nav-item"><a href="index_top.html" class="nav-link"><i class="fas fa-icons"></i> Top</a></li>
 					<li class="nav-item"><a href="index_closest_parties.html" class="nav-link"><i class="fas fa-icons"></i> Close</a></li>
+					<li class="nav-item"><a href="index_boxes.html" class="nav-link"><i class="fas fa-box-open"></i> Boxes</a></li>
 					<li class="nav-item"><a href="index_login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
 					<li class="nav-item"><a href="index_register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
 					<li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
@@ -111,7 +112,14 @@
 			</form>
 		</div>
 		<pre class="tab1"></pre>
-		<h2>Questions list</h2>
+		<h2>Questions list</h2>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+<script>
+  function deleteRow(btn) {
+  var row = btn.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+</script>
+
 	  <div class="table-responsive">
 		  <table class="table table-striped table-sm">
 			<thead>
@@ -129,8 +137,13 @@
 				<td>3678 Simpson Avenue</td>
 				<td>goibre8518@yopmail.com</td>
 				<td>Drink, balloons, cake</td>
-				<td><button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Edit</button>
-					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" data-target="#modal3">Delete</button>
+				<td>
+					<button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Edit</button>
+					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" onclick="deleteRow(this)" data-target="#modal3">Delete</button>
+					<button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#stuffModalEdit">Edit Items</button>
+					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" data-target="#stuffModal">Items</button>
+					<button type="submit" onclick="location.href='index_maps.html'" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Add to map</button>
+					<button type="submit" onclick="location.href='index_maps.html'"  class="btn btn-danger font-size-12" data-toggle="modal" data-target="#modal3">Remove from map</button>
 				</td>
 			  </tr>
 			  <tr>
@@ -138,8 +151,13 @@
 				<td>Ossining, NY 10562</td>
 				<td>gregegrew18@yopmail.com</td>
 				<td>Champagne</td>
-				<td><button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Edit</button>
-					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" data-target="#modal3">Delete</button>
+				<td>
+					<button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Edit</button>
+					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal"  onclick="deleteRow(this)" data-target="#modal3">Delete</button>
+					<button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#stuffModalEdit">Edit Items</button>
+					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" data-target="#stuffModal">Items</button>
+					<button type="submit" onclick="location.href='index_maps.html'" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Add to map</button>
+					<button type="submit" onclick="location.href='index_maps.html'"  class="btn btn-danger font-size-12" data-toggle="modal" data-target="#modal3">Remove from map</button>
 				</td>
 			  </tr>
 			  <tr>
@@ -147,8 +165,13 @@
 				<td>West New York, NJ 07093</td>
 				<td>rybgcs@yopmail.com</td>
 				<td>Cake, balloons</td>
-				<td><button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Edit</button>
-					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" data-target="#modal3">Delete</button>
+				<td>
+					<button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Edit</button>
+					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal"  onclick="deleteRow(this)" data-target="#modal3">Delete</button>
+					<button type="submit" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#stuffModalEdit">Edit Items</button>
+					<button type="submit" class="btn btn-danger font-size-12" data-toggle="modal" data-target="#stuffModal">Items</button>
+					<button type="submit" onclick="location.href='index_maps.html'" class="btn btn-primary font-size-12" data-toggle="modal" data-target="#modal3">Add to map</button>
+					<button type="submit" onclick="location.href='index_maps.html'"  class="btn btn-danger font-size-12" data-toggle="modal" data-target="#modal3">Remove from map</button>
 				</td>
 			  </tr>
 			 
@@ -158,8 +181,56 @@
 
 </main>
 
-	
+<!-- Modal -->
+<div class="modal fade" id="stuffModal" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<table id="dsTable">
+					<tbody>
+					<tr>
+						<td>Drink</td>
+						<td><input type="button" value="Delete" onclick="deleteRow(this)"/></td>
+						<td><input type="button" value="Edit" /></td>
+						<td><input type="button" value="Add new"/></td>
+					</tr>
+					  <tr>
+						<td>balloons</td>
+						<td><input type="button" value="Delete" onclick="deleteRow(this)"/></td>
+						<td><input type="button" value="Edit"/></td>
+						<td><input type="button" value="Add new" /></td>
+					  </tr>
+					  <tr>
+						<td>Cake</td>
+						<td><input type="button" value="Delete" onclick="deleteRow(this)"/></td>
+						<td><input type="button" value="Edit" /></td>
+						<td><input type="button" value="Add new" /></td>
+					  </tr>
+					</tbody>
+				  </table>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+			</div>
+		</div>
+	</div>
+	</div>	
 
+	<!-- Modal -->
+<div class="modal fade" id="stuffModalEdit" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<input type="text" placeholder="Drink" id="name" name="name" requiredminlength="4" maxlength="8" size="10">
+				<input type="text" placeholder="Balloons" id="name" name="name" requiredminlength="4" maxlength="8" size="10">
+				<input type="text" placeholder="Cake" id="name" name="name" requiredminlength="4" maxlength="8" size="10">​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary mr-auto" data-dismiss="modal" >Submit</button>
+			 </div>
+		</div>
+	</div>
+	</div>	
 
 <!-- #MainPart -->
 
