@@ -17,7 +17,9 @@
 
 	<!-- Top Bar -->
 	<div class="top-bar">
-		<div class="col-12 text-right"></div>
+		<div class="col-12 text-right">
+			<button type="button" class="btn btn-primary" onclick="document.location='index_organizer.html'"><i class="fas fa-glass-cheers"></i></button>
+		</div>
 	</div>
 	<!-- End Top Bar -->
 
@@ -47,37 +49,113 @@
 					<li class="nav-item"><a href="index_register.html" class="nav-link"><i class="fas fa-user-plus"></i> Register</a></li>
 					<li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
 			</ul>
+			<div class="popup" onclick="setLocalStorage()">
+				<a href="index.html">  <span class="popuptext" id="myPopup" style="margin-left: -550px; margin-top: -200px;"> These are the parties in the map!</span></a>
+			</div>
 		</div>
 		</div>
 	</nav>
 
 <!-- #Main Part -->
 
+<style>
 
-<div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span> </span></div>
-        </div>
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Name</label><input type="text" class="form-control" value="John" readonly></div>
-                    <div class="col-md-12"><label class="labels">Surname</label><input type="text" class="form-control" value="Doe" readonly></div>
-                    <div class="col-md-12"><label class="labels">Phone number</label><input type="text" class="form-control" value="112" readonly></div>
-                </div>
-				<button class="btn login_btn float-right p-2" style="margin: 20px;"><a href="index_edit_profile.html" style="color: inherit; text-decoration: none;">Edit</a></button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
+	/* Set display to none for image*/
+	#image {
+		display: none;
+	}
 
+	#image1 {
+		display: none;
+	}
 
+	#image2 {
+		display: none;
+	}
+
+	.box{
+		text-align: center;
+	}
+
+</style>
+
+	<div class="box">
+		<h1 style="margin-top: 1%;">Entry tier box</h1>
+		<h3>25€</h3>
+
+		<!-- Add id to image -->
+		<div class="box">
+			<img style="margin-left: 38%; margin-top: 2%; margin-bottom: 3%; border-radius: 5%;" id="image" src="./img/gif1.gif"
+			alt="image" />
+		</div>
+	</div>
+
+	<img style="margin-left: 40%; margin-top: 2%; margin-bottom: 3%; border-radius: 5%;" type="button" src="./img/box.PNG"
+		onclick="show()" id="btnID">
+    </img>
+
+	<div class="box">
+		<h1 style="margin-top: 1%;">Pro tier box</h1>
+		<h3>75€</h3>
+
+		<!-- Add id to image -->
+		<div class="box">
+			<img style="margin-left: 38%; margin-top: 2%; margin-bottom: 3%; border-radius: 5%;" id="image1" src="./img/gif2.gif"
+			alt="image1" />
+		</div>
+	</div>
+
+	<img style="margin-left: 40%; margin-top: 2%; margin-bottom: 3%; border-radius: 5%;" type="button" src="./img/box.PNG"
+		onclick="show1()" id="btnID1">
+    </img>
+
+	<div class="box">
+		<h1 style="margin-top: 1%;">Party Animal tier box</h1>
+		<h3>150€</h3>
+
+		<!-- Add id to image -->
+		<div class="box">
+			<img style="margin-left: 38%; margin-top: 2%; margin-bottom: 3%; border-radius: 5%;" id="image2" src="./img/gif3.gif"
+			alt="image2" />
+		</div>
+	</div>
+
+	<img style="margin-left: 40%; margin-top: 2%; margin-bottom: 3%; border-radius: 5%;" type="button" src="./img/box.PNG"
+		onclick="show2()" id="btnID2">
+    </img>
+
+	<script>
+		function show() {
+
+			/* Access image by id and change
+			the display property to block*/
+			document.getElementById('image')
+					.style.display = "block";
+
+			document.getElementById('btnID')
+					.style.display = "none";
+		}
+		function show1() {
+
+		/* Access image by id and change
+		the display property to block*/
+		document.getElementById('image1')
+				.style.display = "block";
+
+		document.getElementById('btnID1')
+				.style.display = "none";
+		}
+		function show2() {
+
+		/* Access image by id and change
+		the display property to block*/
+		document.getElementById('image2')
+				.style.display = "block";
+
+		document.getElementById('btnID2')
+				.style.display = "none";
+		}
+	</script>
 
 <!-- #MainPart -->
 
@@ -87,7 +165,6 @@
 <footer>
 	<div class="container">
 		<div class="row text-light text-center py-4 justify-content-center">
-
 <div class="col-sm-10 col-md-8 col-lg-6">
 	<img src="img/BlackLogo.PNG" alt="">
 	<p>Don't forget to share your experience on one of the social networking platforms:</p>
@@ -113,6 +190,27 @@
 
 
 	<!-- Script Source Files -->
+
+	<script>
+
+		// When the user clicks on div, open the popup
+		function setLocalStorage() {
+			var value = localStorage.getItem("fromRegister");
+			if(value == "maps") {
+				localStorage.setItem("fromRegister", "");
+			}
+		}
+	
+		var myPopup = document.getElementById("myPopup");
+		var parties = document.getElementById("parties");
+		var layout = localStorage.getItem("fromRegister");
+	
+		if(layout == "maps"){
+			myPopup.classList.toggle("show");
+			localStorage.setItem("fromRegister", "");
+		}
+	
+	</script>
 
 	<!-- jQuery -->
 	<script src="js/jquery-3.5.1.min.js"></script>
